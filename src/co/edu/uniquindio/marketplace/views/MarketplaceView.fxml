@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="638.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.marketplace.controller.MarketplaceViewController">
+   <children>
+      <TabPane layoutY="-2.0" prefHeight="637.0" prefWidth="847.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Administrador">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="532.0" prefWidth="847.0">
+                     <children>
+                        <Label layoutX="19.0" layoutY="16.0" text="Agregar Vendedor" />
+                        <Separator layoutY="535.0" prefHeight="3.0" prefWidth="857.0" />
+                        <Label layoutX="24.0" layoutY="59.0" text="Nombre :" />
+                        <Label layoutX="409.0" layoutY="58.0" text=" Cedula :" />
+                        <Label layoutX="24.0" layoutY="105.0" text="Apellido :" />
+                        <Label layoutX="413.0" layoutY="104.0" prefHeight="17.0" prefWidth="56.0" text="Direccion :" />
+                        <TextField fx:id="txtNombreVendedor" layoutX="83.0" layoutY="55.0" prefHeight="25.0" prefWidth="309.0" />
+                        <TextField fx:id="txtApellidoVendedor" layoutX="82.0" layoutY="102.0" prefHeight="25.0" prefWidth="309.0" />
+                        <TextField fx:id="txtDireccionVndedor" layoutX="483.0" layoutY="101.0" prefHeight="25.0" prefWidth="328.0" />
+                        <TextField fx:id="txtCedulaVendedor" layoutX="483.0" layoutY="52.0" prefHeight="25.0" prefWidth="328.0" />
+                        <Button fx:id="btnNuevoVendedor" layoutX="124.0" layoutY="180.0" mnemonicParsing="false" onAction="#nuevoVendedorAction" prefHeight="30.0" prefWidth="100.0" text="Nuevo" />
+                        <Button fx:id="btnAgregarVendedor" layoutX="388.0" layoutY="180.0" mnemonicParsing="false" onAction="#agregarVendedorAction" prefHeight="30.0" prefWidth="100.0" text="Agregar" />
+                        <Button fx:id="btnActualizarVendedor" layoutX="660.0" layoutY="179.0" mnemonicParsing="false" onAction="#actualizarVendedorAction" prefHeight="30.0" prefWidth="100.0" text="Actualizar" />
+                        <Separator layoutY="238.0" prefHeight="0.0" prefWidth="847.0" />
+                        <Separator layoutX="2.0" layoutY="272.0" prefHeight="0.0" prefWidth="847.0" />
+                        <Label layoutX="7.0" layoutY="245.0" prefHeight="17.0" prefWidth="101.0" text="Lista Vendedores" />
+                        <TableView fx:id="tableVendedor" layoutX="1.0" layoutY="271.0" prefHeight="263.0" prefWidth="271.0">
+                          <columns>
+                            <TableColumn fx:id="columNombreVendedores" prefWidth="133.0" text="Nombre" />
+                            <TableColumn fx:id="columIdVendedor" prefWidth="136.0" text="ID" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnEliminarVendedor" layoutX="389.0" layoutY="545.0" mnemonicParsing="false" onAction="#eliminarVendedorAction" prefHeight="30.0" prefWidth="100.0" text="Eliminar" />
+                        <Separator layoutX="2.0" layoutY="41.0" prefHeight="0.0" prefWidth="847.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="vendedor 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="830.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor1" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor1" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor1" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor1" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor1" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor21" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor1" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor1" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor1" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor1" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor1" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="vendedor 2 ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor2" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor2" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor2" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor2" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor2" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor2" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor2" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor2" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor2" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor2" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor2" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor3" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor3" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor3" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor3" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor3" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor3" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor3" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor3" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor3" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor3" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor3" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 4">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor4" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor4" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor4" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor4" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor4" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor4" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor4" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor4" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor4" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor4" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor4" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 5">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor5" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor5" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor5" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor5" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor5" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor5" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor5" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor5" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor5" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor5" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor5" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 6">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor6" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor6" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor6" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor6" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor6" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor6" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor6" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor6" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor6" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor6" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor6" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 7">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor7" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor7" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor7" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor7" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor7" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor7" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor7" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor7" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor7" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor7" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor7" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 8">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor8" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor8" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor8" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor8" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor8" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor8" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor8" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor8" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor8" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor8" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor8" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 9">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor9" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor9" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor9" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor9" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor9" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor18" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor9" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor9" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor9" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor9" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor9" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="vendedor 10">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="609.0" prefWidth="841.0">
+                           <children>
+                              <SplitPane dividerPositions="0.7145061728395061" layoutX="-5.0" layoutY="-1.0" prefHeight="610.0" prefWidth="845.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="596.0">
+                                       <children>
+                                          <Pane layoutX="9.0" layoutY="3.0" prefHeight="165.0" prefWidth="589.0">
+                                             <children>
+                                                <TextField fx:id="txtNombreVendedor10" editable="false" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtApellidoVendedor10" editable="false" layoutX="91.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtCedulaVendedor10" layoutX="91.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <TextField fx:id="txtDireccionVendedor10" editable="false" layoutX="91.0" layoutY="115.0" prefHeight="25.0" prefWidth="194.0" />
+                                                <ImageView fx:id="ivImagenVendedor10" fitHeight="105.0" fitWidth="140.0" layoutX="383.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label layoutX="22.0" layoutY="17.0" text="Nombre:" />
+                                                <Label layoutX="21.0" layoutY="50.0" prefHeight="17.0" prefWidth="61.0" text="Apellido:" />
+                                                <Label layoutX="22.0" layoutY="85.0" text="Cedula:" />
+                                                <Label layoutX="22.0" layoutY="119.0" prefHeight="17.0" prefWidth="72.0" text="Dirección:" />
+                                                <Separator layoutX="-6.0" layoutY="156.0" prefHeight="0.0" prefWidth="592.0" />
+                                             </children>
+                                          </Pane>
+                                          <TableView fx:id="tableObjetosVendedor10" layoutX="11.0" layoutY="234.0" prefHeight="356.0" prefWidth="583.0">
+                                             <columns>
+                                                <TableColumn fx:id="columNombreProductoVendedor10" prefWidth="219.33334350585938" text="Nombre" />
+                                                <TableColumn fx:id="columPrecioProductoVendedor10" prefWidth="165.66665649414062" text="Precio" />
+                                                <TableColumn fx:id="columEstadoProductoVendedor10" prefWidth="197.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="28.0" layoutY="186.0" prefHeight="17.0" prefWidth="140.0" text="Lista de Productos:" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="249.0">
+                                       <children>
+                                          <TableView layoutX="7.0" layoutY="8.0" prefHeight="131.0" prefWidth="228.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListSugerenciasVendedor10" prefWidth="227.0" text="Lista de Sugerencias:" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView layoutX="8.0" layoutY="153.0" prefHeight="131.0" prefWidth="234.0">
+                                             <columns>
+                                                <TableColumn fx:id="tableListContactosVendedor10" prefWidth="227.66668701171875" text="Lista de Contactos:" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="155.0" text="Informacion Producto" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
